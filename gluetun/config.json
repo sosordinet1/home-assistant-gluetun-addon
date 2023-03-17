@@ -4,6 +4,8 @@
   "slug": "gluetun",
   "description": "Gluetun VPN client",
   "url": "https://github.com/shadynafie/home-assistant-gluetun-addon",
+  "icon": "/gluetun/icon.png",
+  "logo": "/gluetun/logo.png",
   "startup": "services",
   "boot": "auto",
   "options": {
@@ -26,4 +28,3 @@
   "cap_add": ["NET_ADMIN"],
   "host_network": true
 }
-

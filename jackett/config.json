@@ -2,21 +2,36 @@
   "name": "Jackett",
   "version": "1.0.0",
   "slug": "jackett",
-  "description": "Jackett container using Gluetun's VPN",
+  "description": "Jackett add-on for Home Assistant",
   "url": "https://github.com/shadynafie/home-assistant-gluetun-addon",
-  "startup": "services",
+  "startup": "application",
   "boot": "auto",
   "options": {
-    "PUID": 1000,
-    "PGID": 100,
-    "TZ": "Europe/London"
+    "network_mode": "addon_db21ed7f_transmission_openvpn",
+    "downloads_folder": "/downloads",
+    "PUID": "1000",
+    "PGID": "1000"
   },
   "schema": {
-    "PUID": "int",
-    "PGID": "int",
-    "TZ": "str"
+    "network_mode": "str",
+    "downloads_folder": "str",
+    "PUID": "str",
+    "PGID": "str"
   },
-  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "network_mode": "service:transmission",
-  "restart": "unless-stopped"
+  "image": "linuxserver/jackett",
+  "host_network": false,
+  "apparmor": "disable",
+  "privileged": [],
+  "devices": [],
+  "full_access": false,
+  "udev": false,
+  "environment": {
+    "TZ": "Europe/London"
+  },
+  "ports": {
+    "9117/tcp": 9117
+  },
+  "volumes": {
+    "/config": "rw"
+  }
 }

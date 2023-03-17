@@ -41,3 +41,7 @@ Please make sure to start the Gluetun add-on before starting the Jackett add-on.
 ## Support
 
 If you encounter any issues or need help with the add-ons, please open an issue on the [GitHub repository](https://github.com/shadynafie/home-assistant-gluetun-addon/issues).
+
+## Credits
+
+This addon is based on the [Gluetun](https://github.com/qdm12/gluetun) project by [qdm12](https://github.com/qdm12).

@@ -1,6 +1,6 @@
 {
-  "name": "Gluetun Add-on Repository",
+  "name": "Smart Tech Arabic Addons",
   "url": "https://github.com/shadynafie/home-assistant-gluetun-addon",
-  "maintainer": "Shady Nafie <shady.nafie@me.com>",
-  "addons": ["gluetun"]
+  "maintainer": "@smarttecharabic"
 }
+

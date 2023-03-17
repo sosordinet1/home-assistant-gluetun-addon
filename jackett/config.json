@@ -1,0 +1,22 @@
+{
+  "name": "Jackett",
+  "version": "1.0.0",
+  "slug": "jackett",
+  "description": "Jackett container using Gluetun's VPN",
+  "url": "https://github.com/shadynafie/home-assistant-gluetun-addon",
+  "startup": "services",
+  "boot": "auto",
+  "options": {
+    "PUID": 1000,
+    "PGID": 100,
+    "TZ": "Europe/London"
+  },
+  "schema": {
+    "PUID": "int",
+    "PGID": "int",
+    "TZ": "str"
+  },
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "network_mode": "service:gluetun",
+  "restart": "unless-stopped"
+}

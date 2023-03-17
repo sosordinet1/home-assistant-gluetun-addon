@@ -17,6 +17,6 @@
     "TZ": "str"
   },
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "network_mode": "service:gluetun",
+  "network_mode": "service:transmission",
   "restart": "unless-stopped"
 }

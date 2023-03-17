@@ -1,0 +1,26 @@
+{
+  "name": "Gluetun",
+  "version": "1.0.0",
+  "slug": "gluetun",
+  "description": "Gluetun VPN client",
+  "url": "https://github.com/shadynafie/home-assistant-gluetun-addon",
+  "startup": "services",
+  "boot": "auto",
+  "options": {},
+  "schema": {},
+  "image": "qmcgaw/gluetun",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "ports": {
+    "9117/tcp": 9117,
+    "9091/tcp": 9091,
+    "51413/tcp": 51413,
+    "51413/udp": 51413
+  },
+  "environment": {
+    "VPN_SERVICE_PROVIDER": "your_VPN_provider",
+    "OPENVPN_USER": "your_email@example.com",
+    "OPENVPN_PASSWORD": "your_password"
+  },
+  "cap_add": ["NET_ADMIN"],
+  "host_network": true
+}

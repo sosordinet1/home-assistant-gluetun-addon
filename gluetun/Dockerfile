@@ -1,2 +1,7 @@
-ARG BUILD_FROM="qmcgaw/gluetun"
-FROM ${BUILD_FROM}
+FROM qmcgaw/gluetun
+
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/bin/sh"]
+

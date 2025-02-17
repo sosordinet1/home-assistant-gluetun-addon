@@ -1,4 +1,4 @@
-FROM sosordinet1/gluetun
+FROM /gluetun
 
 COPY entrypoint.sh /entrypoint.sh
 
